@@ -1,0 +1,38 @@
+
+
+:root {
+    /* =========================== */
+    /* "Native" theme configuration */
+    /* =========================== */
+
+    
+    --fontFamily: Inter, Arial, sans-serif;
+    
+    
+    --contentMaxWidth: 756px;
+    
+    --topNavHeight: 68px;
+    --logoHeight: 28px;
+    
+}
+
+ 
+.side-navigation-wrapper {
+}
+
+ 
+#header {
+}
+
+/* Advanced theme configuration */
+:root {
+  
+}
+
+
+
+ /* Custom CSS overrides */
+body,
+html {
+
+}
