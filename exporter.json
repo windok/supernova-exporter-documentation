@@ -1,7 +1,7 @@
 {
-  "id": "io.supernova.documentation-main",
-  "name": "Default Documentation",
-  "description": "Default customizable exporter for design system documentation",
+  "id": "io.supernova.documentation-main-yevhenii-test",
+  "name": "Windok Documentation (custom image block)",
+  "description": "Windok exporter for design system documentation",
   "author": "Supernova",
   "organization": "Supernova",
   "source_dir": "src",
@@ -613,6 +613,27 @@
             "default": "",
             "type": "string",
             "label": "Markdown URL"
+          }
+        ]
+      },
+      {
+        "key": "test.custom.block.with.image",
+        "category": "Custom block with image",
+        "title": "Custom block with image",
+        "description": "Custom block with image description",
+        "icon": "icons/custom-block-release-notes.png",
+        "mode": "block",
+        "properties": [
+          {
+            "key": "image",
+            "type": "image",
+            "label": "Custom image"
+          },
+          {
+            "key": "description",
+            "default": "",
+            "type": "string",
+            "label": "Image description"
           }
         ]
       },

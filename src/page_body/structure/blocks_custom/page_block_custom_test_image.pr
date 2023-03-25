@@ -1,0 +1,32 @@
+{[ const block = context /]}
+
+{* Render custom test image block from configuration *}
+{[ let customImage = block.properties.image /]}
+{[ let customDescription = block.properties.description /]}
+
+<div class="content-block content-block--custom-test-image" style="border-inline: 3px dotted #CD5C5C;">
+    <h2> Test custom image block </h2>
+    <br/>
+
+    {[ if customDescription]}
+        <p>{{ customDescription }}</p>
+    {[/]}
+    <br/>
+
+    {[ if customImage && customImage.assetUrl ]}
+        <p>image by old key 'assetUrl':</p>
+        <img src="{{ customImage.assetUrl }}" alt="{{ customDescription }}" />
+    {[ else ]}
+        <p>No image found by old key 'assetUrl'</p>
+    {[/]}
+
+    <br/>
+    <br/>
+
+    {[ if customImage && customImage.asset && customImage.asset.url ]}
+        <p>image by new key 'asset.url':</p>
+        <img src="{{ customImage.asset.url }}" alt="{{ customDescription }}" />
+    {[ else ]}
+        <p>No image found by new key 'asset.url'</p>
+    {[/]}
+</div>
