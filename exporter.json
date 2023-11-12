@@ -52,6 +52,13 @@
         "category": "Look & feel"
       },
       {
+        "key": "lookAndFeelAccentTypography",
+        "type": "typography",
+        "label": "Accent typography",
+        "description": "This is your main accent typography, used for all links, selected states, and active items.",
+        "category": "Look & feel"
+      },
+      {
         "key": "lookAndFeelAccentAlternativeColor",
         "type": "color",
         "label": "Alternative accent color",
