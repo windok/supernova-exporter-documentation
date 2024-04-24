@@ -2,6 +2,8 @@
 
 {[ let variant = block.variantKey /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+
 {* Configure tile to show natural height if needed *}
 {[ let forceNaturalHeight = (block.properties.alignment === "FrameHeight" || block.properties.layout == "C1" || block.properties.layout == "C1_75") /]}
 

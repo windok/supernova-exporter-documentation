@@ -9,6 +9,8 @@
 {[ let shouldShowTabbar = ds.documentationConfiguration().settings.tabbedNavigation /]}
 {[ let documentationRoot = ds.rootDocumentationGroup() /]}
 
+{{ jsonDebug(page.configuration) }}
+
 {[ if context.groupId ]}
     {* If we pass id of a group, we can request it directly *}
     {[ rootGroup = ds.documentationGroupById(context.groupId) /]}

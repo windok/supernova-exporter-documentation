@@ -8,6 +8,8 @@
 {[ let designSystem = ds.documentationConfiguration().version.designSystem /]}
 {[ let rootGroup = ds.rootDocumentationGroup() /]}
 
+{{ jsonDebug(page.configuration) }}
+
 <!-- Header --> 
 <header id="header" class="sticky-top {{ ((configuration.topNavigationStyle === "Dark") ? "style-dark" : "style-light")}}">     
     <!-- Navbar -->

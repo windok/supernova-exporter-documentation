@@ -2,6 +2,8 @@
 {* Get block *}
 {[ const block = context /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+
 {* Get component from the the main brand *}
 {[ let components = [] /]}
 {[ let brands = ds.allBrands() /]}

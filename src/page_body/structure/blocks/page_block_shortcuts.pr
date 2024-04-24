@@ -1,5 +1,7 @@
 {[ let block = context /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+
 {[ let variant = block.variantKey /]}
 
 <div class="content-block content-block--shortcuts{{ getVariantClass(variant) }}" id="{{ getSearchIDString(block.id) }}">

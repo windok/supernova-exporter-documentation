@@ -2,6 +2,9 @@
 {[ const block = context /]}
 {[ let variant = block.variantKey /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+<br/>
+
 {* Generate unique ID for the sandbox, and retrieve its configuration *}
 {* Having a randomInt as id (side effect) makes button/code.html different on each publish *}
 {[ const sandboxId = block.id.prefixed("sandbox-") /]}

@@ -3,6 +3,8 @@
 {[ let imgClass = "" /]}
 {[ let alignClass = "" /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+
 {* Create image with lightbox interaction, or ignore it if url is not set *}
 {[ if block.url ]}
 {* Align image based on the configuration *}

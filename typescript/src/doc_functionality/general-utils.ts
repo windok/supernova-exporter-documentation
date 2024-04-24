@@ -1,5 +1,7 @@
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 // MARK: - General utils
+import { htmlSafeString } from './sandbox';
+
 var hash = require('short-hash');
 
 export function getFullYear(): string {
@@ -9,6 +11,25 @@ export function getFullYear(): string {
 /* Check if javascript includes exact value */
 export function includes(arr: string[], value: string): boolean {
     return arr.includes(value);
+}
+
+export function jsonDebug(data: any, options: { title?: string } = {}): string {
+    const sanitized = {
+        ...data,
+        ...(data.parent ? { parent: '[sanitized]' } : {}),
+        ...(data.children?.length ? { children: '[sanitized]' } : {}),
+    }
+
+    // console.log(JSON.stringify(sanitized))
+    
+    return (
+      `<div style='font-size: 8px'>
+        ${options?.title ? `<div>${options.title}</div>` : ''}
+        <div style='max-width: 1200px'>
+          <code style='font-family: monospace; margin: 0'>${htmlSafeString(JSON.stringify(sanitized, null, ' '))}</code>
+        </div>
+      </div>`
+    );
 }
 
 /* Get current formatted datetime */

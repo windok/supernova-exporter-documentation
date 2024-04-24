@@ -3,6 +3,9 @@
 {[ const block = context /]}
 {[ let configuration = exportConfiguration() /]}
 
+{{ jsonDebug(block, { "title": (block.type + ' block debug:') }) }}
+{{ jsonDebug(configuration) }}
+
 {* Get properties *}
 {[ let componentId = block.properties.componentId /]}
 
